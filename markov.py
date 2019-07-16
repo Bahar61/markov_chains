@@ -11,8 +11,12 @@ def open_and_read_file(file_path):
     """
 
     # your code goes here
+    file = open(file_path)
+    file = file.read()
 
-    return "Contents of your file as one long string"
+
+
+    return file
 
 
 def make_chains(text_string):
@@ -40,9 +44,12 @@ def make_chains(text_string):
         [None]
     """
 
-    chains = {}
+    chains = {
 
-    # your code goes here
+    }
+
+    split_text_str = text_string.split()
+    for word in text_string:
 
     return chains
 
