@@ -44,30 +44,27 @@ def make_chains(text_string):
         [None]
     """
 
-    chains = {
-
-    }
+    chains = {}
 
     split_text_str = text_string.split()
 
-    # idx = 0
-    for idx in range(len(split_text_str)):
+    
+    for idx in range(len(split_text_str) - 1):
         key = (split_text_str[idx], split_text_str[idx + 1])
         
-        val = split_text_str[idx + 2]
-        # print("val", val)
-        chains[key] = val
-        if key = key:
-            val = 
+        values = []
+        values.append(split_text_str[idx + 2])
+        
+        chains[key] = values
+        
 
-        # idx += 1
+        
 
         print(idx)
         print(key)
         print("CHAINS -------------------", chains)
 
     
-        # print(key)
 
     # return chains
 
