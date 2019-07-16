@@ -49,9 +49,27 @@ def make_chains(text_string):
     }
 
     split_text_str = text_string.split()
-    for word in text_string:
 
-    return chains
+    # idx = 0
+    for idx in range(len(split_text_str)):
+        key = (split_text_str[idx], split_text_str[idx + 1])
+        
+        val = split_text_str[idx + 2]
+        # print("val", val)
+        chains[key] = val
+        if key = key:
+            val = 
+
+        # idx += 1
+
+        print(idx)
+        print(key)
+        print("CHAINS -------------------", chains)
+
+    
+        # print(key)
+
+    # return chains
 
 
 def make_text(chains):
