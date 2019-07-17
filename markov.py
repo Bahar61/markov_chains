@@ -61,8 +61,8 @@ def make_chains(text_string):
             chains[key] = [next_value]
 
 
-    for k, v in chains.items():
-        print(k, ":", v)
+    # for k, v in chains.items():
+    #     print(k, ":", v)
 
     
     return chains
@@ -73,9 +73,27 @@ def make_text(chains):
 
     words = []
 
-    # your code goes here
+    initial_key = choice(list(chains))
+    words.append(initial_key)
 
-    return " ".join(words)
+    while True:
+
+        key_1 = choice(list(chains[initial_key]))
+        words.append(key_1)
+        # print(random_value)
+        if (words[-2][1], key_1) in chains:
+            
+            key_1 = choice(list(chains[words[-2][1], key_1]))
+            words.append(key_1)
+        else:
+            continue
+        # words.append(chains[key_1])
+
+    print(words)
+
+    # return " ".join(words)
+
+    # (choice, are)
 
 
 input_path = "green-eggs.txt"
@@ -87,6 +105,6 @@ input_text = open_and_read_file(input_path)
 chains = make_chains(input_text)
 
 # Produce random text
-random_text = make_text(chains)
+# random_text = make_text(chains)
 
-print(random_text)
+# print(random_text)
